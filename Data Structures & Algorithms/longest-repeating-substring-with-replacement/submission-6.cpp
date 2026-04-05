@@ -1,0 +1,1 @@
+class Solution{public:int characterReplacement(string s,int k){int c[26]={},l=0,m=0,a=0;for(int r=0;r<s.size();r++){m=max(m,++c[s[r]-'A']);while(r-l+1-m>k)c[s[l++]-'A']--;a=max(a,r-l+1);}return a;}};
